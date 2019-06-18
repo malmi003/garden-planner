@@ -1,0 +1,485 @@
+/* grid css */
+/* -------------------------------------------------------------------------- */
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+}
+
+.react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top;
+}
+
+.react-grid-item.cssTransforms {
+    transition-property: transform;
+}
+
+.react-grid-item.resizing {
+    z-index: 1;
+    will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 3;
+    will-change: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+    background: black;
+    opacity: 0.2;
+    transition-duration: 100ms;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.react-grid-item>.react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+.react-grid-item>.react-resizable-handle::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+/* second one */
+.react-resizable {
+    position: relative;
+}
+
+.react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiMwMDAwMDAiLz48L2c+PC9zdmc+');
+    background-position: bottom right;
+    padding: 0 3px 3px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    cursor: se-resize;
+}
+
+/* main from rgl*/
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+}
+
+.react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top;
+}
+
+.react-grid-item.cssTransforms {
+    transition-property: transform;
+}
+
+.react-grid-item.resizing {
+    z-index: 1;
+    will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 3;
+    will-change: transform;
+}
+
+.react-grid-item:not(.react-grid-placeholder) {
+    background: rgba(256, 256, 256, 0.2);
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+/* MINE */
+html {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 0;
+}
+
+body {
+    background-color: rgba(43, 29, 14, .7) !important;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menuTitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: #363636;
+    padding: 2rem 1.5rem 2rem;
+    border-top: 5px inset;
+    color: #555d64;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#dashboard-container {
+    min-height: 775px;
+}
+
+#landing-page-container {
+    background-image: url("/images/eco-warrior-princess-624211-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8rem;
+    min-height: 800px;
+}
+
+#landing-page-container .title {
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+#garden-diagram-container+.footer,
+#dashboard-container+.footer {
+    bottom: inherit;
+}
+
+#garden-diagram-container {
+    background-color: #5c7049;
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+}
+
+.white-background {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    min-height: 750px;
+}
+
+#garden-container {
+    min-height: 750px;
+    background-color: rgba(43, 29, 14, .7);
+    background-image: url("/images/buried.png");
+    max-width: 1000px;
+    margin: auto;
+}
+
+#garden-grid-overlay {
+    min-height: 750px;
+    background-image:
+        linear-gradient(90deg, #808080 1%, transparent 1%),
+        linear-gradient(-180deg, #808080 1%, transparent 1%);
+    background-size: 8.33% 88px;
+    background-position: 0 0, 10px 0, 10px -10px, 0px 10px;
+}
+
+#login-container,
+#sign-up-container {
+    min-height: 800px;
+}
+
+#gardensBox {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    padding: 0px 10px 10px;
+    border-radius: 6px;
+    background-color: rgb(50, 55, 58);
+}
+
+#gardensBox h3,
+#plant-schedule-container h3 {
+    color: whitesmoke;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.hero {
+    max-width: 75%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 6px 6px 0px 0px;
+    background-color: whitesmoke;
+    justify-content: center;
+}
+
+.plantIcon {
+    flex: 0 0 auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.plantIcon:hover {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.canvasjs-chart-canvas {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+}
+
+.canvasjs-chart-toolbar {
+    border-radius: 6px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.highlightPlantGreen {
+    box-shadow: 0px 0px 10px hsl(141, 71%, 48%);
+}
+
+.highlightPlantYellow {
+    box-shadow: 0px 0px 10px hsl(48, 100%, 67%);
+}
+
+.highlightPlantRed {
+    box-shadow: 0px 0px 10px hsl(348, 100%, 61%);
+}
+
+.info-icon {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.numberIcon,
+.lightNumberIcon,
+.plantCountIcon {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1rem;
+    width: 1.5rem;
+    font-size: .70rem;
+    border-radius: 6px;
+    padding: 1px;
+    background: rgba(50, 115, 200, 0.2);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.plantCountIcon {
+    top: 0px;
+    left: 0px;
+}
+
+.lightNumberIcon {
+    color: #fff
+}
+
+/* Tooltip container */
+.right-tooltip,
+.left-tooltip,
+.right-right-tooltip,
+.left-left-tooltip {
+
+    position: relative;
+    display: inline-block;
+}
+
+.top-tooltip {
+    position: relative;
+}
+
+.right-tooltip .tooltiptext,
+.right-right-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(33, 37, 41, .9);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    left: 110%;
+}
+
+.right-tooltip .tooltiptext::after,
+.right-right-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(33, 37, 41, .9) transparent transparent;
+}
+
+.left-tooltip .tooltiptext,
+.left-left-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(33, 37, 41, .9);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    right: 110%;
+}
+
+.left-tooltip .tooltiptext::after,
+.left-left-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(33, 37, 41, .9);
+}
+
+.top-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.top-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.right-tooltip:hover .tooltiptext,
+.left-tooltip:hover .tooltiptext,
+.right-right-tooltip:hover .tooltiptext,
+.left-left-tooltip:hover .tooltiptext,
+.top-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.left-left-tooltip .tooltiptext,
+.right-right-tooltip .tooltiptext,
+.name-tooltip .tooltiptext {
+    top: -5px;
+}
+
+.top-tooltip .tooltiptext {
+    width: 120px;
+}
+
+.menuTitle:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.button.is-dark.is-hovered,
+.button.is-dark:hover {
+    background-color: inherit;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.navbar.is-dark .navbar-brand>a.navbar-item:hover {
+    background-color: inherit;
+}
+
+.modal-background {
+    background-color: rgba(10, 10, 10, .5);
+}
+
+#login-container .card,
+#sign-up-container .card {
+    -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    border: none;
+}
+
+/* #sign-up-container h1,
+#login-container h1 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size:3rem;
+} */
+
+#sign-up-container .input,
+.textarea,
+#login-container .input,
+.textarea {
+    background-color: #726a6208;
+}
+
+@media(max-width: 375px) {
+
+    #dashboard-container,
+    #landing-page-container {
+        min-height: 600px;
+    }
+}
+
+@media(max-height: 700px) {
+    #landing-page-container {
+        min-height: 600px;
+    }
+
+    #dashboard-container {
+        min-height: 500px;
+    }
+}
